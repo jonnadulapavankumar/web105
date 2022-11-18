@@ -1,0 +1,695 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+
+<head>
+    <title>Error Found - Where Developers Learn, support, Share </title>
+    <meta charset="utf-8">
+    <link rel="icon" href
+    ="./img/favicon.ico" type="image/x-icon" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet"/>
+
+    <link href="https://fonts.googleapis.com/css?family=Varela&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/login.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<style>
+ .wrapper {
+    max-width: 450px;
+    margin: 2px auto;
+    position: absolute;
+    margin-top: -22px;
+    z-index: 99;
+}
+.wrapper .search-input{
+  background: #fff;
+  width: 100%;
+  border-radius: 5px;
+  position: relative;
+  box-shadow: 0px 1px 5px 3px rgba(0,0,0,0.12);
+}
+.search-input input{
+  height: 47px;
+  width: 100%;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  padding: 0 60px 0 20px;
+  font-size: 18px;
+  box-shadow: 0px 1px 5px rgba(0,0,0,0.1);
+}
+.search-input.active input{
+  border-radius: 5px 5px 0 0;
+}
+.search-input .autocom-box{
+  padding: 0;
+  opacity: 0;
+  pointer-events: none;
+  max-height: 280px;
+  overflow-y: auto;
+}
+.search-input.active .autocom-box{
+  padding: 10px 8px;
+  opacity: 1;
+  pointer-events: auto;
+}
+.autocom-box li{
+  list-style: none;
+  padding: 8px 12px;
+  display: none;
+  width: 100%;
+  cursor: default;
+  border-radius: 3px;
+}
+.search-input.active .autocom-box li{
+  display: block;
+}
+.autocom-box li:hover{
+  background: #efefef;
+}
+.search-input .icon{
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  height: 55px;
+  width: 55px;
+  text-align: center;
+  line-height: 55px;
+  font-size: 20px;
+  color: #644bff;
+  cursor: pointer;
+}
+.wrapper1 {
+    max-width: 450px;
+    margin: 2px auto;
+    position: fixed;
+    margin-top: -26px;
+    z-index: 99;
+} 
+.wrapper1 .search-input{
+  background: #fff;
+  width: 100%;
+  border-radius: 5px;
+  position: relative;
+  box-shadow: 0px 1px 5px 3px rgba(0,0,0,0.12);
+}
+.search-input input{
+  height: 47px;
+  width: 100%;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  padding: 0 60px 0 20px;
+  font-size: 18px;
+  box-shadow: 0px 1px 5px rgba(0,0,0,0.1);
+}
+.search-input.active input{
+  border-radius: 5px 5px 0 0;
+}
+.search-input .autocom-box{
+  padding: 0;
+  opacity: 0;
+  pointer-events: none;
+  max-height: 280px;
+  overflow-y: auto;
+}
+.search-input.active .autocom-box{
+  padding: 10px 8px;
+  opacity: 1;
+  pointer-events: auto;
+}
+.autocom-box li{
+  list-style: none;
+  padding: 8px 12px;
+  display: none;
+  width: 100%;
+  cursor: default;
+  border-radius: 3px;
+}
+.search-input.active .autocom-box li{
+  display: block;
+}
+.autocom-box li:hover{
+  background: #efefef;
+}
+.search-input .icon{
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  height: 55px;
+  width: 55px;
+  text-align: center;
+  line-height: 55px;
+  font-size: 20px;
+  color: #644bff;
+  cursor: pointer;
+}
+ @media screen and (max-width:1024px){
+    .card {
+    position: relative;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    min-width: 0;
+    margin-left: -40px;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+    border: 1pxsolidrgba(0,0,0,.125);
+    border-radius: .25rem;
+}
+
+
+}
+@media screen and (max-width:768px){
+ 
+.wrapper {
+    display: none;
+}
+.container{
+    display: none;
+}
+.input-group-prepend{
+    display: none;
+}
+.wrapper1 {
+    margin-left: 240px;
+    margin-top: 166px;
+}
+.mobile-footer {
+    text-align: center;
+    margin-bottom: 15px;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+}
+}
+@media screen and (max-width:600px){
+.wrapper1 .search-input {
+    background: #fff;
+    width: 168%;
+    margin-left: -150px;
+    border-radius: 5px;
+    position: relative;
+    text-align: center;
+    justify-content: center;
+    box-shadow: 0px 1px 5px 3px rgb(0 0 0 / 12%);
+}
+}
+
+
+
+</style>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-light border">
+        <div class="container">
+            <a href="./index.html" class="navbar-brand" title="Error Found"><img src="./img/errorFound.png" height="35px;" /></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <ul class="navbar-nav mr-auto">
+                    
+                    <div class="wrapper">
+                        <div class="search-input">
+                          <a href="" target="_blank" hidden></a>
+                          <input type="text" placeholder="Type to search..">
+                          <div class="autocom-box">
+                          </div>
+                          <div class="icon"><img src="C:\Users\lenovo\OneDrive\Desktop\errorfound-2\img.\search.png."></div>
+                        </div>
+                      </div>
+                      
+                    
+                </ul>
+
+                <ul class="nav navbar-nav navbar-right">
+
+                    <li class="nav-item">
+                        
+                    </li>
+                    <li class="nav-item">
+                        <button class="btn pull-right reqBtn mx-2" data-toggle="modal" data-target="#logins">Sign In</button>
+                    </li>
+
+                    
+                  
+
+                    <li class="nav-item btn-group">
+                        <div class="input-group mx-2">
+                            <div class="input-group-prepend">
+                                <img style="border-radius:6px;" src="https://s.gravatar.com/avatar/48902df5a9e2f88f5a37761084d6ac2f?s=35" />
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+
+                
+              
+            </div>
+        </div>
+    </nav>
+    
+      
+    
+
+    <div class="toast" id="myToast" data-autohide="false" style="position: absolute; top: 30px; right: 30px; z-index: 99999;">
+        <div class="toast-header">
+            <strong class="mr-auto"><i class="fa fa-grav"></i> We miss you!</strong>
+            <small>11 mins ago</small>
+            <button type="button" class="ml-2 mb-1 close" data-dismiss="toast">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+        <div class="toast-body">
+            <div style="width: 100%;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa fa-spinner" aria-hidden="true"></i> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
+            
+        </div>
+    </div>
+
+
+
+    <div class="container p-1">
+        <div class="row">
+
+            <div class="col-md-9">
+                <div class="container p-4">
+                    <div class="float-md-left"><h5>Topics  (67,232,234)</h5></div>
+                    <div class="float-md-right"><button class="btn pull-right reqBtn">Post Topic</button></div>
+                </div>
+                <br/>
+                <hr>
+                <div>
+                    <div class="row">
+                        <div class="col-md-1" style="width: 12.499999995%;text-align: center;">09<br/><span style="font-size: 12px;">Views</span></div>
+                        <div class="col-md-10">
+                            <div style="font-weight: bold;font-size: 15px;"><a style="color:black;text-decoration:none;" href="./discussion.html">Karma-Jasmine Testing register form in Angular template driven forms form in Angular template driven forms</a></div>
+                            <div style="font-weight: normal;font-size: 13px;">I'm very new to the Angular. I'm trying to do Jasmine testing on template driven forms but I got stuck please help me with this. This is my .html file</div>
+                        </div>
+                    </div>
+                    <div class="pt-2" style="font-size: 13px;">
+                        <div class="float-md-right" style="opacity: 0.5"><i class="fa fa-user"></i> Virat kohli, 2 days ago</div>
+                        <div class="float-md-left" style="opacity: 0.5;"><i class="fa fa-tags" aria-hidden="true"></i> <span class="username-public">Cloud</span> &nbsp;<span class="username-public">Angular</span> </div>
+                    </div>
+                </div>
+
+                  <br/>
+                <hr>
+                <div>
+                    <div class="row">
+                        <div class="col-md-1" style="width: 12.499999995%;text-align: center;">09<br/><span style="font-size: 12px;">Views</span></div>
+                        <div class="col-md-10">
+                            <div style="font-weight: bold;font-size: 15px;"><a style="color:black;text-decoration:none;" href="./discussion.html">Karma-Jasmine Testing register form in Angular template driven forms form in Angular template driven forms</a></div>
+                            <div style="font-weight: normal;font-size: 13px;">I'm very new to the Angular. I'm trying to do Jasmine testing on template driven forms but I got stuck please help me with this. This is my .html file</div>
+                        </div>
+                    </div>
+                    <div class="pt-2" style="font-size: 13px;">
+                        <div class="float-md-right" style="opacity: 0.5;"><i class="fa fa-user"></i> Anonymous, 2 days ago</div>
+                        <div class="float-md-left" style="opacity: 0.5;"><i class="fa fa-tags" aria-hidden="true"></i> <span class="username-public">Cloud</span> &nbsp;<span class="username-public">Angular</span> </div>
+                    </div>
+                </div>
+
+                  <br/>
+                <hr>
+                <div>
+                    <div class="row">
+                        <div class="col-md-1" style="width: 12.499999995%;text-align: center;">09<br/><span style="font-size: 12px;">Views</span></div>
+                        <div class="col-md-10">
+                            <div style="font-weight: bold;font-size: 15px;"><a style="color:black;text-decoration:none;" href="./discussion.html">Karma-Jasmine Testing register form in Angular template driven forms form in Angular template driven forms</a></div>
+                            <div style="font-weight: normal;font-size: 13px;">I'm very new to the Angular. I'm trying to do Jasmine testing on template driven forms but I got stuck please help me with this. This is my .html file</div>
+                        </div>
+                    </div>
+                    <div class="pt-2" style="font-size: 13px;">
+                        <div class="float-md-right" style="opacity: 0.5;"><i class="fa fa-user"></i> Virat kohli, 2 days ago</div>
+                        <div class="float-md-left" style="opacity: 0.5;"><i class="fa fa-tags" aria-hidden="true"></i> <span class="username-public">Cloud</span> &nbsp;<span class="username-public">Angular</span> </div>
+                    </div>
+                </div>
+
+                  <br/>
+                <hr>
+                <div>
+                    <div class="row">
+                        <div class="col-md-1" style="width: 12.499999995%;text-align: center;">09<br/><span style="font-size: 12px;">Views</span></div>
+                        <div class="col-md-10">
+                            <div style="font-weight: bold;font-size: 15px;"><a style="color:black;text-decoration:none;" href="./discussion.html">Karma-Jasmine Testing register form in Angular template driven forms form in Angular template driven forms</a></div>
+                            <div style="font-weight: normal;font-size: 13px;">I'm very new to the Angular. I'm trying to do Jasmine testing on template driven forms but I got stuck please help me with this. This is my .html file</div>
+                        </div>
+                    </div>
+                    <div class="pt-2" style="font-size: 13px;">
+                        <div class="float-md-right" style="opacity: 0.5;"><i class="fa fa-user"></i> Virat kohli, 2 days ago</div>
+                        <div class="float-md-left" style="opacity: 0.5;"><i class="fa fa-tags" aria-hidden="true"></i> <span class="username-public">Cloud</span> &nbsp;<span class="username-public">Angular</span> </div>
+                    </div>
+                </div>
+
+                  <br/>
+                <hr>
+                <div>
+                    <div class="row">
+                        <div class="col-md-1" style="width: 12.499999995%;text-align: center;">09<br/><span style="font-size: 12px;">Views</span></div>
+                        <div class="col-md-10">
+                            <div style="font-weight: bold;font-size: 15px;"><a style="color:black;text-decoration:none;" href="./discussion.html">Karma-Jasmine Testing register form in Angular template driven forms form in Angular template driven forms</a></div>
+                            <div style="font-weight: normal;font-size: 13px;">I'm very new to the Angular. I'm trying to do Jasmine testing on template driven forms but I got stuck please help me with this. This is my .html file</div>
+                        </div>
+                    </div>
+                    <div class="pt-2" style="font-size: 13px;">
+                        <div class="float-md-right" style="opacity: 0.5;"><i class="fa fa-user"></i> Virat kohli, 2 days ago</div>
+                                                <div class="float-md-left" style="opacity: 0.5;"><i class="fa fa-tags" aria-hidden="true"></i> <span class="username-public">Cloud</span> &nbsp;<span class="username-public">Angular</span> </div>
+                    </div>
+                </div>
+
+                  <br/>
+                <hr>
+                <div>
+                    <div class="row">
+                        <div class="col-md-1" style="width: 12.499999995%;text-align: center;">09<br/><span style="font-size: 12px;">Views</span></div>
+                        <div class="col-md-10">
+                            <div style="font-weight: bold;font-size: 15px;"><a style="color:black;text-decoration:none;" href="./discussion.html">Karma-Jasmine Testing register form in Angular template driven forms form in Angular template driven forms</a></div>
+                            <div style="font-weight: normal;font-size: 13px;">I'm very new to the Angular. I'm trying to do Jasmine testing on template driven forms but I got stuck please help me with this. This is my .html file</div>
+                        </div>
+                    </div>
+                    <div class="pt-2" style="font-size: 13px;">
+                        <div class="float-md-right" style="opacity: 0.5;"><i class="fa fa-user"></i> Virat kohli, 2 days ago</div>
+                        <div class="float-md-left" style="opacity: 0.5;"><i class="fa fa-tags" aria-hidden="true"></i> <span class="username-public">Cloud</span> &nbsp;<span class="username-public">Angular</span> </div>
+                    </div>
+                </div>
+
+                  <br/>
+                <hr>
+                <div>
+                    <div class="row">
+                        <div class="col-md-1" style="width: 12.499999995%;text-align: center;">09<br/><span style="font-size: 12px;">Views</span></div>
+                        <div class="col-md-10">
+                            <div style="font-weight: bold;font-size: 15px;"><a style="color:black;text-decoration:none;" href="./discussion.html">Karma-Jasmine Testing register form in Angular template driven forms form in Angular template driven forms</a></div>
+                            <div style="font-weight: normal;font-size: 13px;">I'm very new to the Angular. I'm trying to do Jasmine testing on template driven forms but I got stuck please help me with this. This is my .html file</div>
+                        </div>
+                    </div>
+                    <div class="pt-2" style="font-size: 13px;">
+                        <div class="float-md-right" style="opacity: 0.5;"><i class="fa fa-user"></i> Virat kohli, 2 days ago</div>
+                        <div class="float-md-left" style="opacity: 0.5;"><i class="fa fa-tags" aria-hidden="true"></i> <span class="username-public">Cloud</span> &nbsp;<span class="username-public">Angular</span> </div>
+                    </div>
+                </div>
+
+                  <br/>
+                <hr>
+                <div>
+                    <div class="row">
+                        <div class="col-md-1" style="width: 12.499999995%;text-align: center;">09<br/><span style="font-size: 12px;">Views</span></div>
+                        <div class="col-md-10">
+                            <div style="font-weight: bold;font-size: 15px;"><a style="color:black;text-decoration:none;" href="./discussion.html">Karma-Jasmine Testing register form in Angular template driven forms form in Angular template driven forms</a></div>
+                            <div style="font-weight: normal;font-size: 13px;">I'm very new to the Angular. I'm trying to do Jasmine testing on template driven forms but I got stuck please help me with this. This is my .html file</div>
+                        </div>
+                    </div>
+                    <div class="pt-2" style="font-size: 13px;">
+                        <div class="float-md-right" style="opacity: 0.5;"><i class="fa fa-user"></i> Virat kohli, 2 days ago</div>
+                        <div class="float-md-left" style="opacity: 0.5;"><i class="fa fa-tags" aria-hidden="true"></i> <span class="username-public">Cloud</span> &nbsp;<span class="username-public">Angular</span> </div>
+                    </div>
+                </div>
+
+                  <br/>
+                <hr>
+                <div>
+                    <div class="row">
+                        <div class="col-md-1" style="width: 12.499999995%;text-align: center;">09<br/><span style="font-size: 12px;">Views</span></div>
+                        <div class="col-md-10">
+                            <div style="font-weight: bold;font-size: 15px;"><a style="color:black;text-decoration:none;" href="./discussion.html">Karma-Jasmine Testing register form in Angular template driven forms form in Angular template driven forms</a></div>
+                            <div style="font-weight: normal;font-size: 13px;">I'm very new to the Angular. I'm trying to do Jasmine testing on template driven forms but I got stuck please help me with this. This is my .html file</div>
+                        </div>
+                    </div>
+                    <div class="pt-2" style="font-size: 13px;">
+                        <div class="float-md-right" style="opacity: 0.5;"><i class="fa fa-user"></i> Virat kohli, 2 days ago</div>
+                        <div class="float-md-left" style="opacity: 0.5;"><i class="fa fa-tags" aria-hidden="true"></i> <span class="username-public">Cloud</span> &nbsp;<span class="username-public">Angular</span> </div>
+                    </div>
+                </div>
+
+                  <br/>
+                <hr>
+                <div>
+                    <div class="row">
+                        <div class="col-md-1" style="width: 12.499999995%;text-align: center;">09<br/><span style="font-size: 12px;">Views</span></div>
+                        <div class="col-md-10">
+                            <div style="font-weight: bold;font-size: 15px;"><a style="color:black;text-decoration:none;" href="./discussion.html">Karma-Jasmine Testing register form in Angular template driven forms form in Angular template driven forms</a></div>
+                            <div style="font-weight: normal;font-size: 13px;">I'm very new to the Angular. I'm trying to do Jasmine testing on template driven forms but I got stuck please help me with this. This is my .html file</div>
+                        </div>
+                    </div>
+                    <div class="pt-2" style="font-size: 13px;">
+                        <div class="float-md-right" style="opacity: 0.5;"><i class="fa fa-user"></i> Virat kohli, 2 days ago</div>
+                        <div class="float-md-left" style="opacity: 0.5;"><i class="fa fa-tags" aria-hidden="true"></i> <span class="username-public">Cloud</span> &nbsp;<span class="username-public">Angular</span> </div>
+                    </div>
+                </div>
+
+                  <br/>
+                <hr>
+                <div>
+                    <div class="row">
+                        <div class="col-md-1" style="width: 12.499999995%;text-align: center;">09<br/><span style="font-size: 12px;">Views</span></div>
+                        <div class="col-md-10">
+                            <div style="font-weight: bold;font-size: 15px;"><a style="color:black;text-decoration:none;" href="./discussion.html">Karma-Jasmine Testing register form in Angular template driven forms form in Angular template driven forms</a></div>
+                            <div style="font-weight: normal;font-size: 13px;">I'm very new to the Angular. I'm trying to do Jasmine testing on template driven forms but I got stuck please help me with this. This is my .html file</div>
+                        </div>
+                    </div>
+                    <div class="pt-2" style="font-size: 13px;">
+                        <div class="float-md-right" style="opacity: 0.5;"><i class="fa fa-user"></i> Virat kohli, 2 days ago</div>
+                        <div class="float-md-left" style="opacity: 0.5;"><i class="fa fa-tags" aria-hidden="true"></i> <span class="username-public">Cloud</span> &nbsp;<span class="username-public">Angular</span> </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card" style="width: 18rem;">
+                    <div class="card-header">
+                      Related Topics
+                    </div>
+                    <ul class="list-group list-group-flush" style="font-size: 12px;">
+                      <li class="list-group-item"><i class="fa fa-eyedropper" aria-hidden="true"></i> &nbsp;Podcast 357: Leaving your job to pursue an indie project as a solo developer </li>
+                      <li class="list-group-item"><i class="fa fa-eyedropper" aria-hidden="true"></i> &nbsp;Podcast 357: Leaving your job to pursue an indie project as a solo developer </li>
+                      <li class="list-group-item"><i class="fa fa-eyedropper" aria-hidden="true"></i> &nbsp;Podcast 357: Leaving your job to pursue an indie project as a solo developer </li>
+                      <li class="list-group-item"><i class="fa fa-eyedropper" aria-hidden="true"></i> &nbsp;Podcast 357: Leaving your job to pursue an indie project as a solo developer </li>
+                      <li class="list-group-item"><i class="fa fa-eyedropper" aria-hidden="true"></i> &nbsp;Podcast 357: Leaving your job to pursue an indie project as a solo developer </li>
+                      <li class="list-group-item"><i class="fa fa-eyedropper" aria-hidden="true"></i> &nbsp;Podcast 357: Leaving your job to pursue an indie project as a solo developer </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div>
+            <nav aria-label="Page navigation" class="pt-4">
+                <ul class="pagination">
+                <li class="page-item">
+                    <a class="page-link" href="#" aria-label="Previous">
+                    <span aria-hidden="true">&laquo;</span>
+                    <span class="sr-only">Previous</span>
+                    </a>
+                </li>
+                <li class="page-item"><a class="page-link" href="#">1</a></li>
+                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                <li class="page-item"><a class="page-link" href="#">4</a></li>
+                <li class="page-item"><a class="page-link" href="#">..</a></li>
+                <li class="page-item"><a class="page-link" href="#">9</a></li>
+                <li class="page-item">
+                    <a class="page-link" href="#" aria-label="Next">
+                    <span aria-hidden="true">&raquo;</span>
+                    <span class="sr-only">Next</span>
+                    </a>
+                </li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+
+    <div class="modal" tabindex="-1" role="dialog" id="basicJobDetailsModal">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Job Code : 1023641</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+                </div>
+                <div class="modal-body">
+                    <div class="container">
+                        <div class="row p-10">
+                            <div class="col">Requirement</div>
+                            <div class="col">: Construction Cmp</div>
+                        </div>
+                        <div class="row p-10">
+                            <div class="col">Job Posted</div>
+                            <div class="col">: 23/12/2015</div>
+                        </div>
+                        <div class="row p-10">
+                            <div class="col">Job Type</div>
+                            <div class="col">: <span class="hideData">Do payment</span></div>
+                        </div>
+                        <div class="row p-10">
+                            <div class="col">Description</div>
+                            <div class="col">: <span class="hideData">Do payment<br>to get complete details</span></div>
+                        </div>
+                        <div class="row p-10">
+                            <div class="col">Job Duration</div>
+                            <div class="col">: <span class="hideData">Do payment</span></div>
+                        </div>
+                        <br>
+                        <p>Note: <i><small>To get complete details against selected job, need to donate the basic amount.</small></i></p>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <a href="./jobDetails.html"><button type="button" class="btn reqBtn"><i class="fa fa-angle-double-right"></i> Proceed</button></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal" id="logins">
+        <div class="modal-dialog">
+            <div class="modal-content">
+
+                <div class="modal-body">
+
+                    <div class="login_form_wrapper">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-md-12 col-sm-12 col-lg-12 col-xs-12">
+                                    
+                                    <div class="login_wrapper">
+                                        <div class="row">
+                                            <div class="col-lg-6 col-md-6 col-xs-12 col-sm-6">
+                                                <a href="#" class="btn btn-primary facebook"> <span>Login with Facebook</span> <i class="fa fa-facebook-f"></i> </a>
+                                            </div>
+                                            <div class="col-lg-6 col-md-6 col-xs-12 col-sm-6"> <a href="#" class="btn btn-primary google-plus"> Login with Google <i class="fa fa-google-plus"></i> </a> </div>
+                                        </div>
+                                        <h2>or</h2>
+                                        <div class="formsix-pos">
+                                            <div class="form-group i-email"> <input type="email" class="form-control" required="" id="email2" placeholder="Email Address *"> </div>
+                                        </div>
+                                        <div class="formsix-e">
+                                            <div class="form-group i-password"> <input type="password" class="form-control" required="" id="password2" placeholder="Password *"> </div>
+                                        </div>
+                                        <div class="login_remember_box"> <label class="control control--checkbox">Remember me <input type="checkbox"> <span class="control__indicator"></span> </label> <a href="#" class="forget_password"> Forgot Password </a> </div>
+                                        <div class="login_btn_wrapper"> <a href="#" class="btn btn-primary login_btn"> Login </a> </div>
+                                        <div class="login_message">
+                                            <p>Don’t have an account ? <a href="#"> Sign up </a> </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    
+    <div class="wrapper1">
+        <div class="search-input">
+          <a href="" target="_blank" hidden></a>
+          <input type="text" placeholder="Type to search..">
+          <div class="autocom-box">
+          </div>
+          <div class="icon"><img src="C:\Users\lenovo\OneDrive\Desktop\errorfound-2\img.\search.png."></div>
+        </div>
+      </div>   
+    <footer  style="margin-top: 80px;"></footer>
+        
+        <div class="mobile-footer"style="text-align: center;margin-bottom: 15px;">
+            <hr>
+            <span style="color:#f37f29;font-size: 28px;">ERRORFOUND</span><br>
+            <small>Copyright &copy; 2021</small> <small>Errorfound Inc, All rights reserved</small>
+        </div>
+    </footer>
+
+    
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="./js/main.js"></script> 
+    <script>
+        $(document).ready(function(){
+            // $(".toast").toast('show'); // enable this to show up toast
+        })
+        let suggestions = [
+    "Channel",
+    "CodingLab",
+    "CodingNepal",
+    "YouTube",
+    "YouTuber",
+    "YouTube Channel",
+    "Blogger",
+    "Bollywood",
+    "Vlogger",
+    "Vechiles",
+    "Facebook",
+    "Freelancer",
+    "Facebook Page",
+    "Designer",
+    "Developer",
+    "Web Designer",
+    "Web Developer",
+    "Login Form in HTML & CSS",
+    "How to learn HTML & CSS",
+    "How to learn JavaScript",
+    "How to became Freelancer",
+    "How to became Web Designer",
+    "How to start Gaming Channel",
+    "How to start YouTube Channel",
+    "What does HTML stands for?",
+    "What does CSS stands for?",
+];
+const searchWrapper = document.querySelector(".search-input");
+const inputBox = searchWrapper.querySelector("input");
+const suggBox = searchWrapper.querySelector(".autocom-box");
+const icon = searchWrapper.querySelector(".icon");
+let linkTag = searchWrapper.querySelector("a");
+let webLink;
+inputBox.onkeyup = (e)=>{
+    let userData = e.target.value; 
+    let emptyArray = [];
+    if(userData){
+        icon.onclick = ()=>{
+            webLink = "https://www.google.com/search?q=" + userData;
+            linkTag.setAttribute("href", webLink);
+            console.log(webLink);
+            linkTag.click();
+        }
+        emptyArray = suggestions.filter((data)=>{
+            return data.toLocaleLowerCase().startsWith(userData.toLocaleLowerCase()); 
+        });
+        emptyArray = emptyArray.map((data)=>{
+            return data = '<li>'+ data +'</li>';
+        });
+        searchWrapper.classList.add("active"); 
+        showSuggestions(emptyArray);
+        let allList = suggBox.querySelectorAll("li");
+        for (let i = 0; i < allList.length; i++) {
+            allList[i].setAttribute("onclick", "select(this)");
+        }
+    }else{
+        searchWrapper.classList.remove("active"); 
+    }
+}
+
+function select(element){
+    let selectData = element.textContent;
+    inputBox.value = selectData;
+    icon.onclick = ()=>{
+        webLink = "https://www.google.com/search?q=" + selectData;
+        linkTag.setAttribute("href", webLink);
+        linkTag.click();
+    }
+    searchWrapper.classList.remove("active");
+}
+
+function showSuggestions(list){
+    let listData;
+    if(!list.length){
+        userValue = inputBox.value;
+        listData = '<li>'+ userValue +'</li>';
+    }else{
+        listData = list.join('');
+    }
+    suggBox.innerHTML = listData;
+}
+    </script>
+</body>
+</html>
