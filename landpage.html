@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <link rel="icon" href="./img/favicon.ico" type="image/x-icon" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet"/>
+
+    <link href="https://fonts.googleapis.com/css?family=Varela&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/login.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<style>
+    body{ 
+    font-family: 'Varela', sans-serif; 
+
+    }
+
+    .hideData{ filter: blur(3px);
+    -webkit-touch-callout: none; 
+    -webkit-user-select: none; 
+        -khtml-user-select: none; 
+        -moz-user-select: none; 
+        -ms-user-select: none; 
+            user-select: none; 
+    }
+    .getJobDetails{ cursor: pointer;width: 185px;text-decoration: underline;}
+    .getJobDetails:hover{
+    background:#337ab7;
+    float: left;
+    box-shadow: 0 0 1px #ccc;
+    border: 0px;
+    color: #fff;
+    text-decoration: none;
+    }
+    .reqBtn{border: 1px solid #dfdfdf;}
+    #sticky-footer { flex-shrink: none;bottom: 0px;position: fixed;width: 100%;z-index: 99999;}
+    .coreData{margin-bottom: 50px;}
+
+    .username-public {
+    padding-right: 10px;
+    background-color: #c8c8c8;
+    padding-left: 10px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    border-radius: 5px;
+    }
+
+    .email-public {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 5px;
+    }
+
+    .hand {
+    cursor: pointer;
+    }
+    .reply-reaction-view {
+    display: none;
+    }
+    .record-view {
+    background-color: #f5f5f5;
+    border-radius: 5px;
+    }
+    .has-search .form-control {
+    padding-left: 2.375rem;
+    }
+
+    .has-search .form-control-feedback {
+    position: absolute;
+    z-index: 2;
+    display: block;
+    width: 2.375rem;
+    height: 2.375rem;
+    line-height: 2.375rem;
+    text-align: center;
+    pointer-events: none;
+    color: #aaa;
+    }
+
+    .site-footer .site-footer--container, .site-footer .site-footer--extra {
+    max-width: 1155px;
+    width: 100%;
+    height: 450px;
+    margin: 0 auto;
+    padding: var(--su32) var(--su12) var(--su12) var(--su12);
+    display: flex;
+    flex-flow: row wrap;
+    background-color: darkslategray;
+    }
+    .site-footer .site-footer--logo {
+    flex: 0 0 64px;
+    margin-top: 25px;
+    margin-left: 25px;
+    }
+    .site-footer .site-footer--nav {
+    display: flex;
+    flex: 2 1 auto;
+    flex-wrap: wrap;
+    }
+    .site-footer .site-footer--col {
+    padding: 0 var(--su12) var(--su24) 0;
+    flex: 1 0 auto;
+    }
+    .wrapper {
+    width: 100%;
+    padding-left: 1.7rem;
+    padding-right: 1.7rem;
+    padding-top: 5rem;
+    margin-bottom: 5rem;
+    }
+    .grid-cols-2 {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 4rem;
+    }
+    .grid-item-1 {
+    padding-top: 0rem;
+    padding-left: 1.5rem;
+    }
+    .main-heading {
+    font-weight: 300;
+    font-size: 15px;
+    color: #334157;
+    line-height: 55px;
+    }
+    .main-heading {
+    color: var( - primary-color);
+    }
+    .info-text {
+    margin-top: 1.5rem;
+    font-size: 40px;
+    line-height: 45px;
+    color: #334157;
+    }
+    .btn_wrapper {
+    margin-top: 3.5rem;
+    display: flex;
+    width: 100%;
+    }
+    .btn {
+    width: 110px;
+    height: 50px;
+    background-color: var( - primary-color);
+    display: block;
+    font-size: 16px;
+    color: #fff;
+    text-transform: capitalize;
+    border-radius: 7px;
+    letter-spacing: 1px;
+    transition: 0.4s;
+    }
+    .view_more_btn {
+    width: 130px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    letter-spacing: 0;
+    color: #fff;
+    background-color: rgb(243 129 45);
+    font-weight: 500;
+    margin-right: 10px;
+    }
+
+    .documentation_btn {
+    width: 130px;
+    height: 45px;
+    font-size: 16px;
+    font-weight: 500;
+    color: #fff;
+    letter-spacing: 0;
+    background-color: #e1e7fc;
+    color: #334157;
+    }
+
+    .grid-item-2 {
+    width: 100%;
+    height: 100%;
+    }
+    .team_img_wrapper {
+    width: 500px;
+    max-width: 100%;
+    height: 440px;
+    }
+    .team_img_wrapper img {
+    width: 85%;
+    height: 125%;
+    margin-top: -125px;
+    object-fit: contain;
+    }
+    
+    @media screen and (max-width: 768px) {
+    .wrapper {
+    padding: 0 0.7rem;
+    }
+    .grid-item-1 {
+    padding-left: 0rem;
+    }
+    .main-heading {
+    font-size: 15px;
+    margin-top: -230px;
+    }
+    .view_more_btn {
+    width: 133px;
+    height: 48px;
+    font-size: 13.5px;
+    margin-right: 1rem;
+    }
+    }
+    @media screen and (max-width: 991px) {
+    .wrapper {
+    padding-top: 3rem;
+    }
+    .grid-cols-2 {
+    grid-template-columns: repeat(auto-fit, minmax(100%, 1fr));
+    }
+    .grid-item-1 {
+    order: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: 0;
+    }
+    .main-heading {
+    font-size: 15px;
+    text-align: center;
+    line-height: 40px;
+    margin-top: -80px;
+    }
+    .info-text {
+    font-size: 30px;
+    text-align: center;
+    padding: 0.7rem;
+    margin-top: -9px;
+    }
+    .btn_wrapper {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    }
+    .grid-item-2 {
+    order: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    }
+    .team_img_wrapper {
+    width: 350px;
+    height: 350px;
+}
+
+} 
+.parent {
+    background-color: rgb(243 129 45);
+    height: 125px;
+    width: 1092px;
+    position: absolute;
+    margin-top: -225px;
+    margin-left: 225px;
+}
+.child h2 {
+margin-bottom: 15px;
+text-align: center;
+color: #334157;
+font-size: 1.4em;
+line-height: 1em;
+font-weight: 400;
+}
+.child p {
+color:#334157;
+text-align: center;
+font-size: 1em;
+line-height: 1.5em;
+font-weight: 300;
+}
+    .child{
+        width: 273px;
+        height: 125px;
+        float: left;
+        padding: 18px;
+        text-align: center;
+        line-height: 150px;
+        cursor: pointer;
+
+    }
+    .bak{
+        background-color:darkgray;
+        color: #fff;
+        font-weight: bold;
+    }
+    @media screen and (min-width:2560px){
+        .parent {
+    background-color:rgb(243 129 45);
+    height: 125px;
+    width: 1096px;
+    position: absolute;
+    margin-top: -225px;
+    margin-left: 745px;
+}
+.child {
+    width: 274px;
+    height: 125px;
+    float: left;
+    margin-left: 0px;
+    text-align: center;
+    line-height: 150px;
+}
+}
+@media screen and (max-width:1440px){
+    .parent {
+    background-color: rgb(243 129 45);
+    height: 125px;
+    width: 1092px;
+    position: absolute;
+    margin-top: -225px;
+    margin-left: 183px;
+}
+}
+@media screen and (max-width:1024px){
+.parent {
+    background-color: rgb(243 129 45);
+    height: 125px;
+    width: 912px;
+    position: absolute;
+    margin-top: -225px;
+    margin-left: 55px;
+}
+.child {
+    width: 228px;
+    height: 125px;
+    float: left;
+    margin-left: 0px;
+    text-align: center;
+    line-height: 150px;
+}
+}
+
+@media screen and (max-width:768px){
+.parent {
+    background-color: rgb(243 129 45);
+    height: 500px;
+    width: 768px;
+    position: absolute;
+    margin-top: -65px;
+    margin-left: 1px;
+}
+ 
+ .child {
+    position: relative;
+    padding: 10px 20px 25px;
+    width: 100%;
+    cursor: pointer;
+    border-bottom: 1px solid white;
+} 
+.team_img_wrapper{
+  display: none;
+}
+.input-group-prepend{
+    display: none;
+}
+}  
+@media screen and (max-width:600px){
+    .parent {
+    background-color:rgb(243 129 45);
+    height: 500px;
+    width: 100%;
+    position: absolute;
+    margin-top: -65px;
+    margin-left: 1px;
+}
+.input-group-prepend{
+    display: none;
+}
+}
+</style>
+        <body>
+
+            <nav class="navbar navbar-expand-lg navbar-light border">
+                <div class="container">
+                    <a href="./index.html" class="navbar-brand" title="Error Found"><img src="./img/errorFound.png" height="35px;" /></a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarCollapse">
+                        <ul class="navbar-nav mr-auto">
+                        
+                            <li class="nav-item">
+                                <a href="./topics.html" class="nav-link">Topics</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="./about.html" class="nav-link">About</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="./browse.html" class="nav-link">Browse</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="./advertise.html" class="nav-link">Advertise</a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a href="./browse.html" class="nav-link">Forteams</a>
+                            </li>
+
+                            
+                        </ul>
+
+                        <ul class="nav navbar-nav navbar-right">
+
+                            <li class="nav-item">
+                                <div class="input-group">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text form-control" style="background: white;">
+                                        <i class="fa fa-search" aria-hidden="true"></i>
+                                    </span>
+                                    </div>
+                                    <input type="text" class="form-control" placeholder="Search">
+                                </div>
+                            </li>
+                            <li class="nav-item btn-group">
+                                <div class="input-group mx-2">
+                                    <div class="input-group-prepend">
+                                        <img style="border-radius:6px;" src="https://s.gravatar.com/avatar/48902df5a9e2f88f5a37761084d6ac2f?s=35" />
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+            <section class="wrapper">
+                <div class="container">
+                <div class="grid-cols-2">
+                <div class="grid-item-1">
+                <h6 class="main-heading">Lorem Ipsum</h6>
+                <p class="info-text">Landing Page Design</p>
+                <div class="btn_wrapper">
+                     <button class="btn view_more_btn"> Sign in </button>
+                     <button class="btn documentation_btn"> Show me</button>
+                 </div>
+                </div>
+                   <div class="grid-item-2">
+                        <div class="team_img_wrapper">
+                             <img src="C:\Users\lenovo\OneDrive\Desktop\errorfound-2\img.\photo008.png." alt="team-img" />
+                        </div>
+                    </div>
+                </div>
+                </div>
+            </section>
+            
+              
+<body>
+    <div class="parent" id="parent">
+        <div id="child1" dat="1" class="child bak" onclick="window.location='#'">
+        <h2 >STEP 1</h2>
+        <p>Lorem ipsum dolor sit  consectetur adipisicing </p>
+        </div>
+        <div id="child2" dat="2" class="child" onclick="window.location='#'">
+        <h2>STEP 2</h2>
+        <p>Lorem ipsum dolor sit  consectetur dolor.</p>
+        </div>
+        <div id="child3" dat="3" class="child" onclick="window.location='#'">
+        <h2>STEP 3</h2>
+        <p>Lorem ipsum dolor sit  consectetur dolor.</p>
+        </div>
+        <div id="child4" dat="4" class="child" onclick="window.location='#'">
+        <h2>STEP 4</h2>
+        <p>Lorem ipsum dolor sit  consectetur dolor.</p>
+        </div>
+    </div>
+    
+    <center>
+        <div id="info">STEP 1 Lorem ipsum dolor sit consectetur adipisicing</div>
+    </center>
+
+    <footer style="margin-top:80px">
+        <hr>
+        
+        <div style="margin-bottom: 15px;text-align: center;">
+            <span style="color: #f37f29; font-size:28px;">ERRORFOUND</span>
+            <br>
+            <small>Copyright &copy 2021</small>
+            <small>errorFound Inc,All rights reserved</small>
+        </div>
+    </footer>
+
+    
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+        <script src="./js/main.js"></script> 
+        <script>
+             var _nextCard;
+             var elements=document.getElementsByClassName("child");
+             for(var i=0;i<elements.length;i++){
+                 elements[i].onclick=function(){
+                    console.log('bak')
+                    console.log("reached")
+                    // clearInterval(nextCard)
+                    var e1=elements[0];
+                    while(e1){
+                        if(e1.tagName==="DIV"){
+                            e1.classList.remove("bak");
+                        }
+                        e1=e1.nextSibling;
+                    }
+                    this.classList.add("bak"); 
+                    
+                
+                }
+            }
+
+            function _nextCard() {
+                var child = document.getElementById(document.getElementsByClassName('child bak')[0].id);
+                var parent = child.parentNode;
+                var _currChild = Array.prototype.indexOf.call(parent.children,child) + 1;
+
+                let _cardsLength = document.getElementsByClassName("child").length;
+                if (_currChild === _cardsLength)
+                    _nextChild = 1;
+                else
+                    _nextChild = _currChild + 1;
+                document.getElementById('info').innerHTML = document.getElementById("child"+_nextChild).textContent; 
+                document.getElementById('child'+_currChild).classList.remove('bak');
+                document.getElementById('child'+_nextChild).classList.add('bak');
+            }
+             _nextCard = setInterval(_nextCard, 3000)
+            //clearInterval(_nextCard)
+           
+         
+ 
+        </script>
+            
+    </body>
+</html>  
